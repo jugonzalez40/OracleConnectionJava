@@ -1,26 +1,31 @@
 package models;
 
-public class Empleado {
-	private int idEmpleado ;
+public class Empleado implements Model {
+	private int idEmpleado;
 	private String nombreEmpleado;
-	private int idDepartamento;
-	
+	private Departamento idDepartamento;
+
 	public int getIdEmpleado() {
 		return idEmpleado;
 	}
+
 	public void setIdEmpleado(int idEmpleado) {
 		this.idEmpleado = idEmpleado;
 	}
+
 	public String getNombreEmpleado() {
 		return nombreEmpleado;
 	}
+
 	public void setNombreEmpleado(String nombreEmpleado) {
 		this.nombreEmpleado = nombreEmpleado;
 	}
-	public int getIdDepartamento() {
+
+	public Departamento getIdDepartamento() {
 		return idDepartamento;
 	}
-	public void setIdDepartamento(int idDepartamento) {
+
+	public void setIdDepartamento(Departamento idDepartamento) {
 		this.idDepartamento = idDepartamento;
 	}
 }

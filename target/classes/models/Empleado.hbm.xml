@@ -13,10 +13,10 @@
 			type="string" >
 		</property>
 		<!-- Departamento  -->
-		<property  
+		<many-to-one 
 			name="idDepartamento" 
-			column="FK_ID_DEPARTAMENTO"
-			type="int" 
-		></property>
+			class="models.Departamento"
+			column="FK_ID_DEPARTAMENTO"  
+			cascade="all" />
 	</class>
 </hibernate-mapping>  

@@ -1,36 +1,25 @@
 package oracleconn;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-
+import commons.Crud;
 import models.Departamento;
+import models.Empleado;
 
 public class Main {
-
 	public static void main(String[] args) {
-		// Create typesafe ServiceRegistry object
-		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
 
-		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
+		// Menu m = new Menu();
+		// m.start();
 
-		SessionFactory factory = meta.getSessionFactoryBuilder().build();
-		Session session = factory.openSession();
-		Transaction t = session.beginTransaction();
+		Departamento dep = new Departamento();
+		dep.setIdDepartamento(505);
 
-		Departamento departamento = new Departamento();
-		departamento.setIdDepartamento(7);
-		departamento.setNombreDepartamento("BOGOTA");
+		Empleado emp = new Empleado();
+		emp.setIdDepartamento(dep);
+		emp.setNombreEmpleado("JUAN2");
+		emp.setIdEmpleado(2);
 
-		session.save(departamento);
-		t.commit();
-		System.out.println("successfully saved");
-		factory.close();
-		session.close();
+		Crud crud = new Crud(emp);
+		crud.insertOrUpdate();
 	}
 
 	/*

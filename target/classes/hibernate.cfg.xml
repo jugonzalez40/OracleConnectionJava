@@ -7,7 +7,7 @@
 
 	<session-factory>
 		<property name="hbm2ddl.auto">update</property>
-		
+		<property name="hibernate.show_sql">false</property>
 		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
 		<property name="connection.username">juan</property>
@@ -19,3 +19,6 @@
 	</session-factory>
 
 </hibernate-configuration>  
+<logger name="org.hibernate">
+  <level value="info"/> 
+</logger>

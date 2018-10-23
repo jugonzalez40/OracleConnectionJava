@@ -14,3 +14,7 @@ create table empleado (
 
 drop table departamento;
 drop table empleado;
+
+select * from departamento;
+
+insert into departamento values (55,'Bogotá');
