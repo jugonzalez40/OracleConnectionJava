@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
+
+<hibernate-mapping>
+	<class name="models.Departamento" table="DEPARTAMENTO">
+		<id name="idDepartamento" column="ID_DEPARTAMENTO" type="int"></id>
+		<!-- Nombre -->
+		<property 
+			name="nombreDepartamento" 
+			column="NOMBRE_DEPARTAMENTO" 
+			type="string" >
+		</property>
+	</class>
+</hibernate-mapping>  

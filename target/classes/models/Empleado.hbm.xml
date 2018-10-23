@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
+
+<hibernate-mapping>
+	<class name="models.Empleado" table="EMPLEADO">
+		<id name="idEmpleado" column="ID_EMPLEADO" type="int"></id>
+		<!-- Nombre -->
+		<property  
+			name="nombreEmpleado" 
+			column="NOMBRE_EMPLEADO" 
+			type="string" >
+		</property>
+		<!-- Departamento  -->
+		<property  
+			name="idDepartamento" 
+			column="FK_ID_DEPARTAMENTO"
+			type="int" 
+		></property>
+	</class>
+</hibernate-mapping>  
